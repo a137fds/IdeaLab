@@ -18,12 +18,22 @@
   - `/projects/` — projects
   - `/projects/wattmeter/` — Wattmeter project
 - A project is a page within IdeaLab, not an external website.
+- All internal content pages must include breadcrumbs showing their location in the IdeaLab hierarchy.
+- Breadcrumbs must use normal HTML links and require no JavaScript.
+- The home page does not need breadcrumbs.
+- Example: `Idea Lab / Проекты / WattMonitor`.
 
 ## Cards
 
 - Cards are the primary visual and navigation element of the home page and section pages.
 - The global IdeaLab styles control the appearance and behavior of these cards: layout, dimensions, spacing, borders, rounded corners, shadows, hover effects, and related UI details.
 - The visual style should be light, pleasant, lively, and welcoming rather than dark or gloomy.
+
+## Global Styling
+
+- The IdeaLab shell uses one global stylesheet located at the repository root: `style.css`.
+- Main pages and section pages use the global stylesheet rather than creating a separate stylesheet for each section.
+- Individual projects may have their own stylesheet when their visual design is independent from IdeaLab.
 
 ## Project Isolation
 
@@ -38,6 +48,7 @@
 
 - Phrases are maintained in `phrases.md`.
 - Each phrase is stored as a separate line without translation or explanation.
+- The phrases section has a separate `phrases.html` presentation page using the global `style.css`.
 - Projects are represented by navigation cards and individual project pages.
 
 ## Current Projects
